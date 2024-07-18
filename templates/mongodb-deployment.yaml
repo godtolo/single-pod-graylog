@@ -6,6 +6,10 @@ metadata:
   app: mongodb
   release: {{ .Release.Name }}
 spec:
+  selector:
+    matchLabels:
+      app: mongodb
+      release: {{ .Release.Name }}
   replicas: 1
   template:
     metadata:
