@@ -2,6 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: graylog
+  namespace: graylog
   labels:
     app: graylog
     release: {{ .Release.Name }}
