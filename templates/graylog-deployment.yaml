@@ -1,6 +1,7 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
+  namespace: graylog
   labels:
     app: graylog
     release: {{ .Release.Name }}
@@ -114,6 +115,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  namespace: graylog
   labels:
     app: graylog
     release: {{ .Release.Name }}
