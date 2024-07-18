@@ -1,8 +1,8 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
+  namespace: graylog
   labels:
-    namespace: graylog
     app: elasticsearch
     component: elasticsearch
     release: {{ .Release.Name }}
