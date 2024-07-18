@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   labels:
+    namespace: graylog
     app: elasticsearch
     component: elasticsearch
     release: {{ .Release.Name }}
@@ -106,6 +107,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: elasticsearch
+  namespace: graylog
   labels:
     app: elasticsearch
     release: {{ .Release.Name }}
